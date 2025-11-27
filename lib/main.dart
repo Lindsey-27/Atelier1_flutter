@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'ResultPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -40,6 +41,14 @@ class _FormPageState extends State<FormPage> {
     ScaffoldMessenger.of(
       context,
     ).showSnackBar(SnackBar(content: Text("Données validées")));
+
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) =>
+            Resultpage(name: name, email: email, telephone: telephone),
+      ),
+    );
   }
 
   @override
