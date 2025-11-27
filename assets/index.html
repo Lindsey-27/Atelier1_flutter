@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte de visite</title>
+    <script src="index.js"></script>
+    <style>
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #f2f2f2;
+            font-family: sans-serif;
+        }
+        .card{
+            background: white;
+            width: 300px;
+            padding: 20px;
+            text-align: center;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .avatar{
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        button{
+            margin-top: 15px;
+            padding: 10px 15px;
+            border: none;
+            background: #007bff;
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover{
+            background: #005fcc;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="" class="avatar">
+
+        <h1>Nom : </h1>
+        <h2>Developpeur Mobile</h2>
+
+        <p>Email : exemple@mail.com</p>
+        <p>Telephone : 77 000 00 00</p>
+
+        <button id="contactBtn">Me contacter</button>
+    </div>
+</body>
+</html>
