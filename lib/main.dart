@@ -39,7 +39,7 @@ class _FormPageState extends State<FormPage> {
 
     ScaffoldMessenger.of(
       context,
-    ).showSnackBar(SnackBar(content: Text("Données envoyées")));
+    ).showSnackBar(SnackBar(content: Text("Données validées")));
   }
 
   @override
