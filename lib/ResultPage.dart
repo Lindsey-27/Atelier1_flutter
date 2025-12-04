@@ -17,18 +17,39 @@ class Resultpage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text("Resultat")),
       body: Center(
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            CircleAvatar(
-              radius: 50,
-              backgroundImage: AssetImage('assets/plage.png'),
-            ),
-            const SizedBox(height: 16),
-            Text("Nom: $name", style: const TextStyle(fontSize: 18)),
-            Text("Email: $email", style: const TextStyle(fontSize: 18)),
-            Text("Téléphone: $telephone", style: const TextStyle(fontSize: 18)),
-          ],
+        child: Container(
+          padding: const EdgeInsets.all(20),
+          width: 350,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(25),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.withOpacity(0.3),
+                spreadRadius: 2,
+                blurRadius: 10,
+                offset: const Offset(0, 3),
+              ),
+            ],
+          ),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              CircleAvatar(
+                radius: 50,
+                backgroundImage: AssetImage('assets/plage.png'),
+              ),
+              const SizedBox(height: 16),
+              Text(
+                "Voici vos informations saisies :\n\n"
+                "Nom: $name\n"
+                "Email: $email\n"
+                "Téléphone: $telephone",
+                textAlign: TextAlign.center,
+                style: const TextStyle(fontSize: 18, color: Colors.grey),
+              ),
+            ],
+          ),
         ),
       ),
     );
